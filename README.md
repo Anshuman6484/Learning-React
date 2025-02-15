@@ -6,12 +6,12 @@ Welcome to my project repository! Here, you'll find links to various projects I'
 
 ### 🌟 Featured Projects
 
-- **[Profile Card](#)** - Working With Components, Props, and JSX
+- **[Profile Card](https://profile-card-rust-alpha.vercel.app/)** - Working With Components, Props, and JSX
 
 ## 🔗 Connect with Me
 
-- **GitHub:** [github.com/Anshuman6484](#)
-- **LinkedIn:** [linkedin.com/in/kanshuman6484](#)
+- **GitHub:** [github.com/Anshuman6484](https://github.com/Anshuman6484)
+- **LinkedIn:** [linkedin.com/in/kanshuman6484](https://www.linkedin.com/in/kanshuman6484/)
 
 ---
 
