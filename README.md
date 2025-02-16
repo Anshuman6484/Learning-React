@@ -7,6 +7,7 @@ Welcome to my project repository! Here, you'll find links to various projects I'
 ### 🌟 Featured Projects
 
 - **[Profile Card](https://profile-card-rust-alpha.vercel.app/)** - Working With Components, Props, and JSX
+- **[Date Counter](https://date-counter-psi.vercel.app/)** - State, Events, and Forms Interactive Components
 
 ## 🔗 Connect with Me
 
