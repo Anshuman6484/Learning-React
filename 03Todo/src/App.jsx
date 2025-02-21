@@ -29,7 +29,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 p-6 items-center">
+    <div className="min-h-screen min-w-screen flex flex-col bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 p-6 items-center">
       <Title />
       <div className="max-w-3xl w-full bg-white p-6 rounded-2xl shadow-xl">
         <Input
