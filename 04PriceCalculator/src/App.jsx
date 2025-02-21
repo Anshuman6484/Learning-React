@@ -34,7 +34,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-cyan-400 via-teal-500 to-blue-500 p-6">
+    <div className="min-h-screen min-w-screen flex items-center justify-center bg-gradient-to-r from-cyan-400 via-teal-500 to-blue-500 p-6">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
         <Heading />
 
