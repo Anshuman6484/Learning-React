@@ -8,7 +8,7 @@ export default function App() {
   const [error, setError] = useState(null)
   const [query, setQuery] = useState('')
 
-  const API_KEY = 'AIzaSyDL_XKXHcVKn3RSOS7ayt0dprlAsw0-nAc'
+  const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY
 
   useEffect(
     function () {
@@ -28,14 +28,14 @@ export default function App() {
           setIsLoading(false)
         }
       }
-      if (!query) {
+      if (!query.length) {
         setBooks([])
         setError(null)
         return
       }
       fetchBooks()
     },
-    [error, query]
+    [error, query, API_KEY]
   )
 
   return (
