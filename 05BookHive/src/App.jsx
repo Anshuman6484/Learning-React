@@ -36,7 +36,6 @@ export default function App() {
         try {
           setIsLoading(true)
           setError(null)
-          // console.log("Fetching books for query:", query);
           const res = await fetch(
             `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}`,
             { signal: controller.signal }
