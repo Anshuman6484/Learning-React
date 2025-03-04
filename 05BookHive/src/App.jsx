@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import './App.css'
 
@@ -8,7 +8,10 @@ export default function App() {
   const [error, setError] = useState(null)
   const [query, setQuery] = useState('')
   const [selectedBookId, setSelectedBookId] = useState(null)
-  const [readBooks, setReadBooks] = useState([])
+  const [readBooks, setReadBooks] = useState(function () {
+    const val = localStorage.getItem('readBooks')
+    return val ? JSON.parse(val) : []
+  })
 
   const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY
 
@@ -27,6 +30,13 @@ export default function App() {
   function handleDeleteBook(id) {
     setReadBooks((readBooks) => readBooks.filter((book) => book.id !== id))
   }
+
+  useEffect(
+    function () {
+      localStorage.setItem('readBooks', JSON.stringify(readBooks))
+    },
+    [readBooks]
+  )
 
   useEffect(
     function () {
@@ -91,17 +101,39 @@ export default function App() {
 }
 
 function Header({ query, setQuery }) {
+  const searchEl = useRef(null)
+
+  useEffect(
+    function () {
+      searchEl.current.focus()
+      function handleEnterKey(e) {
+        // if (document.activeElement === searchEl.current) return
+
+        if (e.code === 'Enter' && document.activeElement !== searchEl.current) {
+          searchEl.current.focus()
+          setQuery('')
+        }
+      }
+      document.addEventListener('keydown', handleEnterKey)
+      return () => document.removeEventListener('keydown', handleEnterKey)
+    },
+    [setQuery]
+  )
+
   return (
     <header className="bg-emerald-500 p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold text-white">📚 BOOK HIVE</h1>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 bg-emerald-400 rounded-lg max-w-md mx-auto">
           <input
+            id="search-books"
+            name="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             type="text"
             placeholder="Search books..."
-            className="px-4 py-2 rounded-lg border border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+            className="flex-1 px-4 py-2 rounded-lg border border-emerald-100 focus:outline-none focus:ring-2 focus:ring-emerald-600 transition duration-200 bg-transparent"
+            ref={searchEl}
           />
         </div>
       </div>
