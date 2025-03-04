@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import './App.css'
+import { useLocalStorage } from './hooks/useLocalStorage'
+import { useKey } from './hooks/useKey'
 
 export default function App() {
   const [books, setBooks] = useState([])
@@ -8,10 +10,7 @@ export default function App() {
   const [error, setError] = useState(null)
   const [query, setQuery] = useState('')
   const [selectedBookId, setSelectedBookId] = useState(null)
-  const [readBooks, setReadBooks] = useState(function () {
-    const val = localStorage.getItem('readBooks')
-    return val ? JSON.parse(val) : []
-  })
+  const [readBooks, setReadBooks] = useLocalStorage([], 'readBooks')
 
   const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY
 
@@ -30,13 +29,6 @@ export default function App() {
   function handleDeleteBook(id) {
     setReadBooks((readBooks) => readBooks.filter((book) => book.id !== id))
   }
-
-  useEffect(
-    function () {
-      localStorage.setItem('readBooks', JSON.stringify(readBooks))
-    },
-    [readBooks]
-  )
 
   useEffect(
     function () {
@@ -103,22 +95,15 @@ export default function App() {
 function Header({ query, setQuery }) {
   const searchEl = useRef(null)
 
-  useEffect(
-    function () {
-      searchEl.current.focus()
-      function handleEnterKey(e) {
-        // if (document.activeElement === searchEl.current) return
+  useKey('Enter', function () {
+    if (document.activeElement === searchEl.current) return
+    searchEl.current.focus()
+    setQuery('')
+  })
 
-        if (e.code === 'Enter' && document.activeElement !== searchEl.current) {
-          searchEl.current.focus()
-          setQuery('')
-        }
-      }
-      document.addEventListener('keydown', handleEnterKey)
-      return () => document.removeEventListener('keydown', handleEnterKey)
-    },
-    [setQuery]
-  )
+  useEffect(function () {
+    searchEl.current.focus()
+  })
 
   return (
     <header className="bg-emerald-500 p-4 shadow-md">
@@ -322,6 +307,24 @@ function SelectedBook({ selectedBookId, onCloseBook, onReadBook, readBooks }) {
   const [selectedBook, setSelectedBook] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
+  const title = selectedBook?.volumeInfo?.title
+  const authors = selectedBook?.volumeInfo?.authors
+  const description = selectedBook?.volumeInfo?.description
+  const thumbnail = selectedBook?.volumeInfo?.imageLinks?.thumbnail
+  const previewLink = selectedBook?.volumeInfo?.previewLink
+
+  const isRead = readBooks.map((book) => book.id).includes(selectedBookId)
+
+  function handleAddReadBook() {
+    if (selectedBookId) {
+      const newReadBook = { id: selectedBookId, title, authors, thumbnail }
+      onReadBook(newReadBook)
+      onCloseBook()
+    }
+  }
+
+  useKey('Escape', onCloseBook)
+
   useEffect(
     function () {
       async function fetchBookDetails() {
@@ -338,12 +341,6 @@ function SelectedBook({ selectedBookId, onCloseBook, onReadBook, readBooks }) {
     [selectedBookId]
   )
 
-  const title = selectedBook?.volumeInfo?.title
-  const authors = selectedBook?.volumeInfo?.authors
-  const description = selectedBook?.volumeInfo?.description
-  const thumbnail = selectedBook?.volumeInfo?.imageLinks?.thumbnail
-  const previewLink = selectedBook?.volumeInfo?.previewLink
-
   useEffect(
     function () {
       if (!title) return
@@ -354,31 +351,6 @@ function SelectedBook({ selectedBookId, onCloseBook, onReadBook, readBooks }) {
       }
     },
     [title]
-  )
-
-  const isRead = readBooks.map((book) => book.id).includes(selectedBookId)
-
-  function handleAddReadBook() {
-    if (selectedBookId) {
-      const newReadBook = { id: selectedBookId, title, authors, thumbnail }
-      onReadBook(newReadBook)
-      onCloseBook()
-    }
-  }
-
-  useEffect(
-    function () {
-      function handleKeyDown(e) {
-        if (e.code === 'Escape') {
-          onCloseBook()
-        }
-      }
-      document.addEventListener('keydown', handleKeyDown)
-      return function () {
-        document.removeEventListener('keydown', handleKeyDown)
-      }
-    },
-    [onCloseBook]
   )
 
   return (
