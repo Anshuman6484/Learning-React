@@ -11,6 +11,7 @@ Welcome to my project repository! Here, you'll find links to various projects I'
 - **[Todo](https://react-projects-eta-wine.vercel.app/)** - State, Events and Props
 - **[Price Calculator](https://price-calculator-nu.vercel.app/)** - Thinking In React State Management
 - **[Book Hive](https://book-finder-eosin.vercel.app/)** - API Integration with React State Management
+- **[IQIgnite](https://iq-ignite.vercel.app/)** - useReducer Hook
 
 ## 🔗 Connect with Me
 
