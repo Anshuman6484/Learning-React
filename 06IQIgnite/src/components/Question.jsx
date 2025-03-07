@@ -13,6 +13,7 @@ export default function Question({ question, dispatch, answer }) {
         ...question.incorrect_answers,
         question.correct_answer,
       ]
+      // Fisher-Yates shuffle algorithm
       for (let i = allOptions.length - 1; i >= 0; i--) {
         const j = Math.floor(Math.random() * (i + 1))
         ;[allOptions[i], allOptions[j]] = [allOptions[j], allOptions[i]]
