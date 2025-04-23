@@ -1,0 +1,84 @@
+.homepage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  color: #ffffff;
+  background: url('/bg.jpg') no-repeat center center/cover;
+}
+
+.homepage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.homepage h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.homepage h3 {
+  font-size: 1.2rem;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .homepage {
+    padding: 15px;
+  }
+
+  .homepage h2 {
+    font-size: 2rem;
+  }
+
+  .homepage h3 {
+    font-size: 1rem;
+  }
+}
+
+.btn {
+  background-color: #ff6600;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  margin: 8px;
+}
+
+.btn:hover {
+  background-color: #ff4400;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background-color: #ff3300;
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

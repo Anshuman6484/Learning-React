@@ -1,0 +1,23 @@
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  color: #ff6600;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.logo a:hover {
+  color: #0056b3;
+}
