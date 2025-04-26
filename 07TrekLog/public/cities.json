@@ -1,0 +1,121 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Paris",
+      "country": "France",
+      "flag": "FR",
+      "position": { "lat": 48.8566, "lng": 2.3522 },
+      "notes": "Visited Eiffel Tower and enjoyed croissants.",
+      "date": "2024-05-15"
+    },
+    {
+      "id": 2,
+      "name": "Lyon",
+      "country": "France",
+      "flag": "FR",
+      "position": { "lat": 45.75, "lng": 4.85 },
+      "notes": "Explored the old town and had amazing food.",
+      "date": "2023-11-05"
+    },
+    {
+      "id": 3,
+      "name": "Tokyo",
+      "country": "Japan",
+      "flag": "JP",
+      "position": { "lat": 35.6895, "lng": 139.6917 },
+      "notes": "Sakura season was breathtaking!",
+      "date": "2023-04-10"
+    },
+    {
+      "id": 4,
+      "name": "Kyoto",
+      "country": "Japan",
+      "flag": "JP",
+      "position": { "lat": 35.0116, "lng": 135.7681 },
+      "notes": "Loved the ancient temples and traditional tea ceremonies.",
+      "date": "2023-08-20"
+    },
+    {
+      "id": 5,
+      "name": "New York City",
+      "country": "USA",
+      "flag": "US",
+      "position": { "lat": 40.7128, "lng": -74.006 },
+      "notes": "Times Square and Central Park are must-sees.",
+      "date": "2023-09-22"
+    },
+    {
+      "id": 6,
+      "name": "Los Angeles",
+      "country": "USA",
+      "flag": "US",
+      "position": { "lat": 34.0522, "lng": -118.2437 },
+      "notes": "Hollywood Walk of Fame and Venice Beach were highlights.",
+      "date": "2023-02-18"
+    },
+    {
+      "id": 7,
+      "name": "Rome",
+      "country": "Italy",
+      "flag": "IT",
+      "position": { "lat": 41.9028, "lng": 12.4964 },
+      "notes": "History everywhere, loved the Colosseum.",
+      "date": "2023-07-01"
+    },
+    {
+      "id": 8,
+      "name": "Florence",
+      "country": "Italy",
+      "flag": "IT",
+      "position": { "lat": 43.7696, "lng": 11.2558 },
+      "notes": "Admired the art museums and beautiful architecture.",
+      "date": "2023-10-05"
+    },
+    {
+      "id": 9,
+      "name": "Cape Town",
+      "country": "South Africa",
+      "flag": "ZA",
+      "position": { "lat": -33.9249, "lng": 18.4241 },
+      "notes": "Hiked up Table Mountain!",
+      "date": "2022-12-05"
+    },
+    {
+      "id": 10,
+      "name": "Durban",
+      "country": "South Africa",
+      "flag": "ZA",
+      "position": { "lat": -29.8587, "lng": 31.0216 },
+      "notes": "Beautiful beaches and great food.",
+      "date": "2023-01-18"
+    },
+    {
+      "id": 11,
+      "name": "Sydney",
+      "country": "Australia",
+      "flag": "AU",
+      "position": { "lat": -33.8688, "lng": 151.2093 },
+      "notes": "Opera House and Bondi Beach were amazing.",
+      "date": "2022-11-15"
+    },
+    {
+      "id": 12,
+      "name": "Melbourne",
+      "country": "Australia",
+      "flag": "AU",
+      "position": { "lat": -37.8136, "lng": 144.9631 },
+      "notes": "Great street art and coffee culture.",
+      "date": "2023-03-25"
+    },
+    {
+      "id": 13,
+      "name": "Istanbul",
+      "country": "Turkey",
+      "flag": "TR",
+      "position": { "lat": 41.0082, "lng": 28.9784 },
+      "notes": "Loved the mix of cultures and the food.",
+      "date": "2023-06-12"
+    }
+  ]
+}
