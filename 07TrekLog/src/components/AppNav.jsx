@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom'
 function AppNav() {
   return (
     <nav className="flex justify-center mt-6">
-      <div className="bg-gray-800 rounded-xl p-1 flex gap-2 shadow-lg">
+      <div className="bg-gray-800 rounded-xl flex gap-2 shadow-lg">
         <NavLink
           to="cities"
           className={({ isActive }) =>
-            `px-6 py-2 rounded-md font-medium transition-all duration-200 ${
+            `px-6 py-2 rounded-xl font-medium transition-all duration-200 ${
               isActive
-                ? 'bg-green-700 text-white'
+                ? 'bg-green-600 text-white'
                 : 'text-white'
             }`
           }
@@ -20,9 +20,9 @@ function AppNav() {
         <NavLink
           to="countries"
           className={({ isActive }) =>
-            `px-6 py-2 rounded-md font-medium transition-all duration-200 ${
+            `px-6 py-2 rounded-xl font-medium transition-all duration-200 ${
               isActive
-                ? 'bg-green-700 text-white'
+                ? 'bg-green-600 text-white'
                 : 'text-white'
             }`
           }

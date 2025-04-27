@@ -25,14 +25,14 @@ function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto p-6 bg-white rounded-2xl shadow-lg space-y-6 mt-10"
+      className="max-w-md mx-auto p-6 bg-gray-800 text-white rounded-2xl shadow-lg border-l-4 border-green-500 border-t-4 space-y-6 mt-10"
     >
-      <h2 className="text-2xl font-bold text-center text-gray-800">
+      <h2 className="text-2xl font-bold text-green-600 text-center">
         Add a New Place
       </h2>
 
       <div className="flex flex-col space-y-2">
-        <label htmlFor="city" className="text-gray-600 font-medium">
+        <label htmlFor="city" className="font-medium">
           City Name
         </label>
         <input
@@ -47,7 +47,7 @@ function Form() {
       </div>
 
       <div className="flex flex-col space-y-2">
-        <label htmlFor="country" className="text-gray-600 font-medium">
+        <label htmlFor="country" className="font-medium">
           Country
         </label>
         <input
@@ -62,7 +62,7 @@ function Form() {
       </div>
 
       <div className="flex flex-col space-y-2">
-        <label htmlFor="date" className="text-gray-600 font-medium">
+        <label htmlFor="date" className="font-medium">
           Date of Visit
         </label>
         <input
@@ -76,7 +76,7 @@ function Form() {
       </div>
 
       <div className="flex flex-col space-y-2">
-        <label htmlFor="notes" className="text-gray-600 font-medium">
+        <label htmlFor="notes" className="font-medium">
           Notes
         </label>
         <textarea
