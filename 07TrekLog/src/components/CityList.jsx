@@ -1,14 +1,18 @@
 import React from 'react'
 import CityItem from '../components/CityItem'
+import { useCities } from '../hooks/useCities'
 
-function CityList({ cities, isLoading }) {
+function CityList() {
+  const { cities, isLoading } = useCities()
   return (
     <div className="max-w-md mx-auto mt-10">
       {isLoading ? (
-        <p className="text-gray-800 text-center  font-bold text-2xl">Loading...</p>
+        <p className="text-gray-800 text-center  font-bold text-2xl">
+          Loading...
+        </p>
       ) : cities.length === 0 ? (
         <h1 className="text-gray-800 text-center font-bold text-2xl">
-          Add a city by clicking on the map 
+          Add a city by clicking on the map
         </h1>
       ) : (
         <ul>
