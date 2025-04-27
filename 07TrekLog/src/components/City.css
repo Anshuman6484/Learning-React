@@ -1,0 +1,29 @@
+/* City.css */
+
+.card {
+  @apply bg-gray-800 text-gray-100 p-6 rounded-2xl border-l-4 border-t-4 border-green-500 shadow-md max-w-md mx-auto;
+}
+
+.label {
+  @apply text-sm text-gray-400 mb-2;
+}
+
+.sub-label {
+  @apply text-sm text-gray-400 mb-1;
+}
+
+.heading {
+  @apply text-2xl text-green-500 font-semibold mb-4 flex items-center gap-2;
+}
+
+.link {
+  @apply text-amber-400 hover:underline text-base font-medium;
+}
+
+.button-container {
+  @apply text-center mt-4;
+}
+
+.btn {
+  @apply w-1/2 ml-2 bg-gray-600 hover:bg-gray-700 font-semibold py-2 px-4 rounded-xl transition;
+}
