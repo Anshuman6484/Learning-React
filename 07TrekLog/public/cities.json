@@ -11,15 +11,6 @@
     },
     {
       "id": 2,
-      "name": "Lyon",
-      "country": "France",
-      "flag": "FR",
-      "position": { "lat": 45.75, "lng": 4.85 },
-      "notes": "Explored the old town and had amazing food.",
-      "date": "2023-11-05"
-    },
-    {
-      "id": 3,
       "name": "Tokyo",
       "country": "Japan",
       "flag": "JP",
@@ -28,16 +19,7 @@
       "date": "2023-04-10"
     },
     {
-      "id": 4,
-      "name": "Kyoto",
-      "country": "Japan",
-      "flag": "JP",
-      "position": { "lat": 35.0116, "lng": 135.7681 },
-      "notes": "Loved the ancient temples and traditional tea ceremonies.",
-      "date": "2023-08-20"
-    },
-    {
-      "id": 5,
+      "id": 3,
       "name": "New York City",
       "country": "USA",
       "flag": "US",
@@ -46,7 +28,7 @@
       "date": "2023-09-22"
     },
     {
-      "id": 6,
+      "id": 4,
       "name": "Los Angeles",
       "country": "USA",
       "flag": "US",
@@ -55,7 +37,7 @@
       "date": "2023-02-18"
     },
     {
-      "id": 7,
+      "id": 5,
       "name": "Rome",
       "country": "Italy",
       "flag": "IT",
@@ -64,16 +46,7 @@
       "date": "2023-07-01"
     },
     {
-      "id": 8,
-      "name": "Florence",
-      "country": "Italy",
-      "flag": "IT",
-      "position": { "lat": 43.7696, "lng": 11.2558 },
-      "notes": "Admired the art museums and beautiful architecture.",
-      "date": "2023-10-05"
-    },
-    {
-      "id": 9,
+      "id": 6,
       "name": "Cape Town",
       "country": "South Africa",
       "flag": "ZA",
@@ -82,7 +55,16 @@
       "date": "2022-12-05"
     },
     {
-      "id": 10,
+      "id": 7,
+      "name": "London",
+      "country": "United Kingdom",
+      "flag": "GB",
+      "position": { "lat": 51.5074, "lng": -0.1278 },
+      "notes": "Big Ben and Buckingham Palace were amazing.",
+      "date": "2023-08-30"
+    },
+    {
+      "id": 8,
       "name": "Durban",
       "country": "South Africa",
       "flag": "ZA",
@@ -91,7 +73,7 @@
       "date": "2023-01-18"
     },
     {
-      "id": 11,
+      "id": 9,
       "name": "Sydney",
       "country": "Australia",
       "flag": "AU",
@@ -100,16 +82,7 @@
       "date": "2022-11-15"
     },
     {
-      "id": 12,
-      "name": "Melbourne",
-      "country": "Australia",
-      "flag": "AU",
-      "position": { "lat": -37.8136, "lng": 144.9631 },
-      "notes": "Great street art and coffee culture.",
-      "date": "2023-03-25"
-    },
-    {
-      "id": 13,
+      "id": 10,
       "name": "Istanbul",
       "country": "Turkey",
       "flag": "TR",

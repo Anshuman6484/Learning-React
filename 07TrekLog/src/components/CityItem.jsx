@@ -12,10 +12,13 @@ function CityItem({ city }) {
     return String.fromCodePoint(...val)
   }
 
-  const { currentCity } = useCities()
+  const { currentCity, setCurrentCity } = useCities()
   const { id, name, flag, position, date } = city
   return (
-    <Link to={`${id}?lat=${position.lat}&lng=${position.lng}`}>
+    <Link
+      to={`${id}?lat=${position.lat}&lng=${position.lng}`}
+      onClick={() => setCurrentCity(city)}
+    >
       <li
         className={`flex cursor-pointer items-center justify-between text-white px-4 py-3 rounded-lg mb-3 border-l-4 shadow ${
           id === currentCity.id
